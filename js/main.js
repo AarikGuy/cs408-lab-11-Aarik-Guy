@@ -1,6 +1,3 @@
-// Load items when the page is loaded
-window.onload = fetchItems;
-
 // Fetch all items from the AWS Lambda API and display them in the table
 async function fetchItems() {
     try {
@@ -15,7 +12,7 @@ async function fetchItems() {
 // Display the items in the table
 function displayItems(items) {
     const tableBody = document.getElementById('items-table-body');
-    tableBody.innerHTML = ''; // Clear existing items
+    tableBody.innerHTML = ''; 
 
     items.forEach(item => {
         const row = document.createElement('tr');
@@ -31,7 +28,7 @@ function displayItems(items) {
 
 // Add a new item using the form data
 document.getElementById('item-form').onsubmit = async function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const newItem = {
         id: document.getElementById('item-id').value,
@@ -49,8 +46,8 @@ document.getElementById('item-form').onsubmit = async function (event) {
         });
 
         if (response.ok) {
-            fetchItems(); // Refresh the item list
-            document.getElementById('item-form').reset(); // Clear the form
+            fetchItems(); 
+            document.getElementById('item-form').reset(); 
         } else {
             console.error('Error adding item:', response.statusText);
         }
@@ -67,7 +64,7 @@ async function deleteItem(id) {
         });
 
         if (response.ok) {
-            fetchItems(); // Refresh the item list
+            fetchItems(); 
         } else {
             console.error('Error deleting item:', response.statusText);
         }
@@ -75,4 +72,5 @@ async function deleteItem(id) {
         console.error('Error deleting item:', error);
     }
 }
+
 

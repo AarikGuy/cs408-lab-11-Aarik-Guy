@@ -13,7 +13,6 @@
 <body>
     <h1>Simple Demo for PUT, GET, and DELETE</h1>
 
-    <!-- Form for adding new items -->
     <h2>Add New Item to Database</h2>
     <form id="item-form">
         <div class="form-group">
@@ -25,6 +24,8 @@
     </form>
 
     <h2>Item List</h2>
+    <button onclick="fetchItems()">Load All Items</button>
+    
     <table id="items-table">
         <thead>
             <tr>
@@ -35,12 +36,11 @@
             </tr>
         </thead>
         <tbody id="items-table-body">
-            <!-- Items will be populated here -->
         </tbody>
     </table>
 
-    <!-- Link to the external JavaScript file -->
     <script src="js/main.js"></script>
 </body>
 
 </html>
+

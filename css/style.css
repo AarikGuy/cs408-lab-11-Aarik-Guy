@@ -73,3 +73,26 @@ h2 {
 #items-table tr:hover {
   background-color: #ddd;
 }
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s;
+}
+
+button:active {
+  background-color: #004085;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
